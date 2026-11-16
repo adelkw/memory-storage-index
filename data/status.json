@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-16T18:29:38+00:00",
+  "source": "Pricify (pricify.ai)",
+  "license": "CC BY 4.0",
+  "successful": [
+    {
+      "category": "RAM",
+      "week": "2026-W46",
+      "products": 100
+    },
+    {
+      "category": "SSD",
+      "week": "2026-W46",
+      "products": 100
+    },
+    {
+      "category": "HDD",
+      "week": "2026-W46",
+      "products": 100
+    }
+  ],
+  "errors": []
+}
