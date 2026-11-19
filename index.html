@@ -6,7 +6,32 @@
 <meta name="description" content="Memory & Storage Index — weekly US retail prices for RAM, SSD and HDD.">
 <title>Memory & Storage Index</title>
 <style>
-:root{color-scheme:dark;--bg:#0b1020;--panel:#141c30;--panel2:#18233a;--muted:#9aa8c2;--line:#26334e;--accent:#77a9ff;--good:#78d6a2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#edf3ff;font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:1250px;margin:auto;padding:28px 18px 50px}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}h1{font-size:clamp(25px,4vw,36px);margin:0;letter-spacing:-.5px}.muted,.small{color:var(--muted)}.small{font-size:12px}.pill,button,select,input{border:1px solid var(--line);border-radius:10px;padding:9px 13px;background:#1a2740;color:#edf3ff;font:inherit}.pill{display:inline-block;border-radius:99px;font-size:12px}.status{display:inline-flex;align-items:center;gap:8px}.dot{width:8px;height:8px;border-radius:50%;background:var(--good)}button{cursor:pointer}button:hover,select:hover{border-color:var(--accent)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px;margin:22px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px}.num{font-size:27px;font-weight:750}.notice{background:var(--panel2);border:1px solid var(--line);padding:14px;border-radius:12px;margin:15px 0;color:#dce7fa}.tabs{display:flex;gap:8px;margin:20px 0 12px;flex-wrap:wrap}.tabs button.active{background:#294b80;border-color:#5b8fe0}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}.controls input{flex:1;min-width:210px}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:850px}th,td{text-align:start;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--panel2);color:#b9c9e5;font-size:13px;white-space:nowrap}tbody tr:hover{background:#18233a}td.price{font-weight:700;white-space:nowrap}.secondary{display:block;color:var(--muted);font-size:11px;font-weight:400}.empty{text-align:center;padding:32px;color:var(--muted)}a{color:#9fc2ff;text-decoration:none}a:hover{text-decoration:underline}.footer{margin-top:18px}.error{color:#ffc27a}.ltr-num{direction:ltr;unicode-bidi:embed;display:inline-block}.rtl{direction:rtl;text-align:right}.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}@media(max-width:600px){.wrap{padding:20px 12px 35px}.card{padding:14px}.num{font-size:24px}}
+:root{color-scheme:dark;--bg:#0b1020;--panel:#141c30;--panel2:#18233a;--muted:#9aa8c2;--line:#26334e;--accent:#77a9ff;--good:#78d6a2}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#edf3ff;font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:1250px;margin:auto;padding:28px 18px 50px}.top{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+h1{font-size:clamp(25px,4vw,36px);margin:0;letter-spacing:-.5px}.muted,.small{color:var(--muted)}.small{font-size:12px}
+.pill,button,select,input{border:1px solid var(--line);border-radius:10px;padding:9px 13px;background:#1a2740;color:#edf3ff;font:inherit}
+.pill{display:inline-block;border-radius:99px;font-size:12px}.status{display:inline-flex;align-items:center;gap:8px}.dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
+button{cursor:pointer}button:hover,select:hover{border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px;margin:22px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px}.num{font-size:27px;font-weight:750}
+.notice{background:var(--panel2);border:1px solid var(--line);padding:14px;border-radius:12px;margin:15px 0;color:#dce7fa}
+.tabs{display:flex;gap:8px;margin:20px 0 12px;flex-wrap:wrap}.tabs button.active{background:#294b80;border-color:#5b8fe0}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}.controls input{flex:1;min-width:210px}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:850px}
+th,td{text-align:start;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--panel2);color:#b9c9e5;font-size:13px;white-space:nowrap}
+tbody tr:hover{background:#18233a}td.price{font-weight:700;white-space:nowrap}.secondary{display:block;color:var(--muted);font-size:11px;font-weight:400}
+.empty{text-align:center;padding:32px;color:var(--muted)}a{color:#9fc2ff;text-decoration:none}a:hover{text-decoration:underline}
+.footer{margin-top:18px}.error{color:#ffc27a}.ltr-num{direction:ltr;unicode-bidi:embed;display:inline-block}.rtl{direction:rtl;text-align:right}
+.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.history{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px;margin:18px 0 22px}
+.history-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.history h2{font-size:20px;margin:0 0 3px}.history-controls{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.history-summary{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0 4px}.history-summary strong{font-size:20px}
+.chart-wrap{height:280px;position:relative;margin-top:12px}.chart-wrap svg{width:100%;height:100%;overflow:visible}
+.chart-note{margin-top:10px;color:var(--muted);font-size:12px}.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#77a9ff;margin-inline-end:6px}
+@media(max-width:600px){.wrap{padding:20px 12px 35px}.card{padding:14px}.num{font-size:24px}.chart-wrap{height:230px}}
 </style>
 </head>
 <body>
@@ -16,6 +41,25 @@
   <div class="top-actions"><button id="lang" type="button">العربية</button><span class="pill status" id="state"><span class="dot"></span><span id="stateText">Loading data…</span></span></div>
  </header>
  <div class="notice" id="notice">This dashboard uses Pricify's public US retail dataset. Releases are weekly; this site checks for new data daily. Prices are in USD, do not represent Kuwait retail prices, and do not guarantee current stock.</div>
+
+ <section class="history" aria-labelledby="historyTitle">
+  <div class="history-head"><div><h2 id="historyTitle">Historical price trend</h2><div class="small" id="historyIntro">Daily US retail price index · actual source data only</div></div><span class="pill" id="historySourceState">Loading history…</span></div>
+  <div class="history-controls">
+   <select id="historyMetric" aria-label="Historical category">
+    <option value="ddr5">RAM · DDR5 ($/GB)</option><option value="ddr4">RAM · DDR4 ($/GB)</option><option value="nvme">SSD · NVMe ($/TB)</option><option value="hdd">HDD · Desktop & NAS ($/TB)</option>
+   </select>
+   <select id="historyRange" aria-label="Historical period"><option value="1">1 year</option><option value="2">2 years</option></select>
+  </div>
+  <div class="history-summary">
+   <div><div class="small" id="latestLabel">Latest recorded level</div><strong id="historyLatest">—</strong></div>
+   <div><div class="small" id="changeLabel">Change over displayed period</div><strong id="historyChange">—</strong></div>
+   <div><div class="small" id="dateLabel">Data through</div><strong id="historyDate">—</strong></div>
+  </div>
+  <div class="chart-wrap" id="historyChart"><div class="empty">Loading historical prices…</div></div>
+  <div class="legend"><span id="legendLabel">Price level</span></div>
+  <div class="chart-note" id="historyNote">The available public history currently starts on 1 October 2026. The 1-year and 2-year selectors show only dates actually published; no missing history is invented. Source: Pricify price indices, CC BY 4.0.</div>
+ </section>
+
  <section class="grid">
   <div class="card"><div class="muted" id="ramLabel">RAM products</div><div class="num" id="ramCount">—</div><div class="small" id="ramWeek">Waiting for data</div></div>
   <div class="card"><div class="muted" id="ssdLabel">SSD products</div><div class="num" id="ssdCount">—</div><div class="small" id="ssdWeek">Waiting for data</div></div>
@@ -29,10 +73,12 @@
 </main>
 <script>
 const I18N={
- en:{subtitle:'RAM · SSD · HDD | Weekly US retail price monitor',notice:"This dashboard uses Pricify's public US retail dataset. Releases are weekly; this site checks for new data daily. Prices are in USD, do not represent Kuwait retail prices, and do not guarantee current stock.",ram:'RAM products',ssd:'SSD products',hdd:'HDD products',checked:'Last data check',product:'Product',maker:'Manufacturer',model:'Model / part number',price:'Typical price',low:'Weekly low',stock:'Stock at week end',search:'Search product, brand or model',loading:'Loading data…',ready:'Data available',waiting:'Awaiting data',noData:'No published data for this category yet.',noMatch:'No matching products.',notListed:'Not specified',retailers:'retailers',shops:'shops',lowest:'Lowest price store',week:'Week',checkOk:'of 3 categories updated',checkFail:'No successful category update',source:'Source: <a href="https://github.com/pricify-ai/pc-hardware-prices" target="_blank" rel="noopener">Pricify open dataset</a> · License: CC BY 4.0 · Attribution: Pricify (pricify.ai). Currency conversion is indicative, not a live exchange-rate quote.'},
- ar:{subtitle:'RAM · SSD · HDD | مؤشر أسعار التجزئة الأسبوعي الأمريكي',notice:'تعتمد اللوحة على بيانات Pricify العامة لأسعار التجزئة في الولايات المتحدة. تصدر البيانات أسبوعياً، ويتحقق الموقع يومياً من وجود تحديث جديد. الأسعار بالدولار ولا تمثل أسعار الكويت، ولا تضمن توافر المنتج حالياً.',ram:'منتجات RAM',ssd:'منتجات SSD',hdd:'منتجات HDD',checked:'آخر فحص للبيانات',product:'المنتج',maker:'الشركة المصنعة',model:'الموديل / رقم القطعة',price:'السعر المعتاد',low:'أقل سعر أسبوعي',stock:'التوفر بنهاية الأسبوع',search:'ابحث عن المنتج أو الشركة أو الموديل',loading:'جارٍ تحميل البيانات…',ready:'البيانات متوفرة',waiting:'بانتظار البيانات',noData:'لا توجد بيانات منشورة لهذا القسم حالياً.',noMatch:'لا توجد نتائج مطابقة.',notListed:'غير محدد',retailers:'متاجر',shops:'فروع',lowest:'أقل سعر لدى',week:'الأسبوع',checkOk:'من 3 أقسام تم تحديثها',checkFail:'لم ينجح تحديث أي قسم',source:'المصدر: <a href="https://github.com/pricify-ai/pc-hardware-prices" target="_blank" rel="noopener">بيانات Pricify المفتوحة</a> · الترخيص: CC BY 4.0 · الإسناد: Pricify (pricify.ai). تحويل العملة تقريبي وليس سعر صرف مباشراً.'}
+ en:{subtitle:'RAM · SSD · HDD | Weekly US retail price monitor',notice:"This dashboard uses Pricify's public US retail dataset. Releases are weekly; this site checks for new data daily. Prices are in USD, do not represent Kuwait retail prices, and do not guarantee current stock.",ram:'RAM products',ssd:'SSD products',hdd:'HDD products',checked:'Last data check',product:'Product',maker:'Manufacturer',model:'Model / part number',price:'Typical price',low:'Weekly low',stock:'Stock at week end',search:'Search product, brand or model',loading:'Loading data…',ready:'Data available',waiting:'Awaiting data',noData:'No published data for this category yet.',noMatch:'No matching products.',notListed:'Not specified',retailers:'retailers',shops:'shops',lowest:'Lowest price store',week:'Week',checkOk:'of 3 categories updated',checkFail:'No successful category update',source:'Source: <a href="https://github.com/pricify-ai/pc-hardware-prices" target="_blank" rel="noopener">Pricify open dataset</a> · License: CC BY 4.0 · Attribution: Pricify (pricify.ai). Currency conversion is indicative, not a live exchange-rate quote.',historyTitle:'Historical price trend',historyIntro:'Daily US retail price index · actual source data only',latest:'Latest recorded level',change:'Change over displayed period',through:'Data through',historyLoading:'Loading history…',historyReady:'Historical data available',historyFail:'History unavailable',historyEmpty:'No historical observations for this selection.',historyNote:'The available public history currently starts on 1 October 2026. The 1-year and 2-year selectors show only dates actually published; no missing history is invented. Source: Pricify price indices, CC BY 4.0.',period1:'1 year',period2:'2 years',priceLevel:'Price level'},
+ ar:{subtitle:'RAM · SSD · HDD | مؤشر أسعار التجزئة الأسبوعي الأمريكي',notice:'تعتمد اللوحة على بيانات Pricify العامة لأسعار التجزئة في الولايات المتحدة. تصدر البيانات أسبوعياً، ويتحقق الموقع يومياً من وجود تحديث جديد. الأسعار بالدولار ولا تمثل أسعار الكويت، ولا تضمن توافر المنتج حالياً.',ram:'منتجات RAM',ssd:'منتجات SSD',hdd:'منتجات HDD',checked:'آخر فحص للبيانات',product:'المنتج',maker:'الشركة المصنعة',model:'الموديل / رقم القطعة',price:'السعر المعتاد',low:'أقل سعر أسبوعي',stock:'التوفر بنهاية الأسبوع',search:'ابحث عن المنتج أو الشركة أو الموديل',loading:'جارٍ تحميل البيانات…',ready:'البيانات متوفرة',waiting:'بانتظار البيانات',noData:'لا توجد بيانات منشورة لهذا القسم حالياً.',noMatch:'لا توجد نتائج مطابقة.',notListed:'غير محدد',retailers:'متاجر',shops:'فروع',lowest:'أقل سعر لدى',week:'الأسبوع',checkOk:'من 3 أقسام تم تحديثها',checkFail:'لم ينجح تحديث أي قسم',source:'المصدر: <a href="https://github.com/pricify-ai/pc-hardware-prices" target="_blank" rel="noopener">بيانات Pricify المفتوحة</a> · الترخيص: CC BY 4.0 · الإسناد: Pricify (pricify.ai). تحويل العملة تقريبي وليس سعر صرف مباشراً.',historyTitle:'الرسم البياني التاريخي للأسعار',historyIntro:'مؤشر أسعار التجزئة اليومي في أمريكا · بيانات فعلية من المصدر',latest:'آخر مستوى مسجل',change:'التغير خلال الفترة المعروضة',through:'البيانات حتى',historyLoading:'جارٍ تحميل السجل التاريخي…',historyReady:'البيانات التاريخية متوفرة',historyFail:'تعذر تحميل السجل التاريخي',historyEmpty:'لا توجد مشاهدات تاريخية لهذا الاختيار.',historyNote:'يبدأ السجل العام المتاح حالياً من 1 أكتوبر 2026. يعرض اختيار السنة والسنتين التواريخ المنشورة فعلياً فقط، ولا يتم اختلاق بيانات مفقودة. المصدر: مؤشرات Pricify، ترخيص CC BY 4.0.',period1:'سنة واحدة',period2:'سنتان',priceLevel:'مستوى السعر'}
 };
-let lang='en',active='RAM',data={};const $=id=>document.getElementById(id);const cats=['RAM','SSD','HDD'];
+let lang='en',active='RAM',data={},historyRows=[];
+const $=id=>document.getElementById(id),cats=['RAM','SSD','HDD'];
+const HISTORY_URL='https://raw.githubusercontent.com/pricify-ai/pc-hardware-prices/main/indices/pricify-indices.csv';
 function pick(o,keys){for(const k of keys){const v=o?.[k];if(v!==undefined&&v!==null&&v!=='')return v;}return '';}
 function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function products(c){return Array.isArray(data[c]?.products)?data[c].products:[];}
@@ -41,31 +87,65 @@ function render(){
  const t=I18N[lang],list=products(active),q=$('search').value.trim().toLowerCase();
  const filtered=list.filter(p=>JSON.stringify(p).toLowerCase().includes(q));
  $('rows').innerHTML=filtered.map(p=>{
-  const name=pick(p,['name','product','title']);
-  const maker=pick(p,['maker','manufacturer','brand']);
-  const model=pick(p,['model','part_number','type','capacity']);
-  const typical=pick(p,['typical_price_end','week_close','week_low']);
-  const low=pick(p,['week_low','week_close','typical_price_end']);
-  const retailers=pick(p,['retailers_in_stock_end']);
-  const shops=pick(p,['shops_in_stock_end']);
-  const store=pick(p,['lowest_store_end']);
-  let stock=[];
-  if(retailers!=='')stock.push(`${esc(retailers)} ${t.retailers}`);
-  if(shops!=='')stock.push(`${esc(shops)} ${t.shops}`);
-  if(!stock.length)stock.push(t.notListed);
-  const productLink=pick(p,['url']);
-  const productName=productLink?`<a href="${esc(productLink)}" target="_blank" rel="noopener">${esc(name||'—')}</a>`:esc(name||'—');
+  const name=pick(p,['name','product','title']),maker=pick(p,['maker','manufacturer','brand']),model=pick(p,['model','part_number','type','capacity']);
+  const typical=pick(p,['typical_price_end','week_close','week_low']),low=pick(p,['week_low','week_close','typical_price_end']);
+  const retailers=pick(p,['retailers_in_stock_end']),shops=pick(p,['shops_in_stock_end']),store=pick(p,['lowest_store_end']);
+  let stock=[];if(retailers!=='')stock.push(`${esc(retailers)} ${t.retailers}`);if(shops!=='')stock.push(`${esc(shops)} ${t.shops}`);if(!stock.length)stock.push(t.notListed);
+  const productLink=pick(p,['url']),productName=productLink?`<a href="${esc(productLink)}" target="_blank" rel="noopener">${esc(name||'—')}</a>`:esc(name||'—');
   return `<tr><td>${productName}</td><td>${esc(maker||'—')}</td><td>${esc(model||'—')}<span class="secondary">${esc(pick(p,['part_number'])||'')}</span></td><td class="price">${money(typical)}<span class="secondary">${t.price}</span></td><td>${money(low)}</td><td>${stock.join(' · ')}${store?`<span class="secondary">${t.lowest}: ${esc(store)}</span>`:''}</td></tr>`;
  }).join('')||`<tr><td colspan="6" class="empty">${list.length?t.noMatch:t.noData}</td></tr>`;
 }
-function language(){const t=I18N[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';$('subtitle').textContent=t.subtitle;$('notice').textContent=t.notice;$('ramLabel').textContent=t.ram;$('ssdLabel').textContent=t.ssd;$('hddLabel').textContent=t.hdd;$('checkedLabel').textContent=t.checked;$('productHead').textContent=t.product;$('makerHead').textContent=t.maker;$('modelHead').textContent=t.model;$('priceHead').textContent=t.price;$('lowHead').textContent=t.low;$('stockHead').textContent=t.stock;$('search').placeholder=t.search;$('lang').textContent=lang==='en'?'العربية':'English';$('sourceLine').innerHTML=t.source;render();}
+function language(){
+ const t=I18N[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+ $('subtitle').textContent=t.subtitle;$('notice').textContent=t.notice;$('ramLabel').textContent=t.ram;$('ssdLabel').textContent=t.ssd;$('hddLabel').textContent=t.hdd;$('checkedLabel').textContent=t.checked;
+ $('productHead').textContent=t.product;$('makerHead').textContent=t.maker;$('modelHead').textContent=t.model;$('priceHead').textContent=t.price;$('lowHead').textContent=t.low;$('stockHead').textContent=t.stock;$('search').placeholder=t.search;
+ $('lang').textContent=lang==='en'?'العربية':'English';$('sourceLine').innerHTML=t.source;
+ $('historyTitle').textContent=t.historyTitle;$('historyIntro').textContent=t.historyIntro;$('latestLabel').textContent=t.latest;$('changeLabel').textContent=t.change;$('dateLabel').textContent=t.through;$('legendLabel').textContent=t.priceLevel;
+ $('historyNote').textContent=t.historyNote;$('historyRange').options[0].text=t.period1;$('historyRange').options[1].text=t.period2;
+ render();drawHistory();
+}
 document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.cat;render();}));
 $('search').addEventListener('input',render);$('currency').addEventListener('change',render);$('lang').addEventListener('click',()=>{lang=lang==='en'?'ar':'en';language();});
+$('historyMetric').addEventListener('change',drawHistory);$('historyRange').addEventListener('change',drawHistory);
 async function getJson(path){const r=await fetch(path+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status+' for '+path);return r.json();}
-async function load(){const t=I18N[lang];$('stateText').textContent=t.loading;let good=0;for(const c of cats){try{data[c]=await getJson(`data/${c.toLowerCase()}.json`);if(!Array.isArray(data[c]?.products))throw new Error('Invalid products list');good++;$(`${c.toLowerCase()}Count`).textContent=data[c].products.length;$(`${c.toLowerCase()}Week`).textContent=`${t.week}: ${data[c].week||'—'}`;}catch(e){data[c]=null;$(`${c.toLowerCase()}Count`).textContent='—';$(`${c.toLowerCase()}Week`).textContent='Data file unavailable';}}
+async function load(){
+ const t=I18N[lang];$('stateText').textContent=t.loading;let good=0;
+ for(const c of cats){try{data[c]=await getJson(`data/${c.toLowerCase()}.json`);if(!Array.isArray(data[c]?.products))throw new Error('Invalid products list');good++;$(`${c.toLowerCase()}Count`).textContent=data[c].products.length;$(`${c.toLowerCase()}Week`).textContent=`${t.week}: ${data[c].week||'—'}`;}catch(e){data[c]=null;$(`${c.toLowerCase()}Count`).textContent='—';$(`${c.toLowerCase()}Week`).textContent='Data file unavailable';}}
  try{const s=await getJson('data/status.json');$('checkedAt').textContent=s.checked_at?new Date(s.checked_at).toLocaleString(lang==='ar'?'ar-KW':'en-US'):'—';$('checkNote').textContent=good?`${good}/3 ${t.checkOk}`:t.checkFail;}catch{$('checkedAt').textContent='—';$('checkNote').textContent='Status file unavailable';}
- $('stateText').textContent=good?t.ready:t.waiting;render();}
-language();load();
+ $('stateText').textContent=good?t.ready:t.waiting;render();
+}
+async function loadHistory(){
+ const t=I18N[lang];$('historySourceState').textContent=t.historyLoading;
+ try{
+  const r=await fetch(HISTORY_URL+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
+  const csv=await r.text(),lines=csv.trim().split(/\r?\n/);historyRows=lines.slice(1).map(line=>{
+   const a=line.split(',');return {index:a[0],name:a[1],unit:a[2],day:a[3],value:a[4]===''?null:Number(a[4]),level:a[5]===''?null:Number(a[5]),measured:Number(a[6])};
+  }).filter(x=>x.day&&['ddr4','ddr5','nvme','hdd'].includes(x.index));
+  $('historySourceState').textContent=t.historyReady;drawHistory();
+ }catch(e){$('historySourceState').textContent=t.historyFail;$('historyChart').innerHTML=`<div class="empty">${t.historyFail}. ${esc(e.message)}</div>`;}
+}
+function drawHistory(){
+ if(!historyRows.length)return;
+ const metric=$('historyMetric').value,years=Number($('historyRange').value),rows=historyRows.filter(x=>x.index===metric&&x.level!==null).sort((a,b)=>a.day.localeCompare(b.day));
+ if(!rows.length){$('historyChart').innerHTML=`<div class="empty">${I18N[lang].historyEmpty}</div>`;return;}
+ const lastDate=new Date(rows[rows.length-1].day+'T00:00:00Z'),cutoff=new Date(lastDate);cutoff.setUTCFullYear(cutoff.getUTCFullYear()-years);
+ const shown=rows.filter(x=>new Date(x.day+'T00:00:00Z')>=cutoff);
+ if(!shown.length){$('historyChart').innerHTML=`<div class="empty">${I18N[lang].historyEmpty}</div>`;return;}
+ const first=shown[0],last=shown[shown.length-1],delta=(last.level/first.level-1)*100;
+ const fmt=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})+(metric==='ddr4'||metric==='ddr5'?' / GB':' / TB');
+ $('historyLatest').textContent=fmt(last.level);$('historyChange').textContent=(delta>=0?'+':'')+delta.toFixed(2)+'%';$('historyChange').style.color=delta>0?'#ffbd78':delta<0?'#78d6a2':'#edf3ff';
+ $('historyDate').textContent=last.day;$('historySourceState').textContent=I18N[lang].historyReady;
+ const W=900,H=260,L=62,R=18,T=16,B=38,vals=shown.map(x=>x.level),min=Math.min(...vals),max=Math.max(...vals),pad=(max-min)*.14||Math.max(max*.02,.01),lo=min-pad,hi=max+pad;
+ const x=i=>L+(shown.length===1?0:i/(shown.length-1))*(W-L-R),y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
+ const points=shown.map((d,i)=>`${x(i).toFixed(1)},${y(d.level).toFixed(1)}`).join(' ');
+ const grid=[0,.25,.5,.75,1].map(k=>{const v=lo+(hi-lo)*k,yy=y(v);return `<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" stroke="#26334e" stroke-width="1"/><text x="${L-9}" y="${yy+4}" text-anchor="end" fill="#9aa8c2" font-size="11">${v.toFixed(2)}</text>`;}).join('');
+ const firstLabel=shown[0].day,lastLabel=shown[shown.length-1].day,midLabel=shown[Math.floor(shown.length/2)].day;
+ const labels=[{d:firstLabel,xx:L,anchor:'start'},{d:midLabel,xx:(L+W-R)/2,anchor:'middle'},{d:lastLabel,xx:W-R,anchor:'end'}].map(o=>`<text x="${o.xx}" y="${H-9}" text-anchor="${o.anchor}" fill="#9aa8c2" font-size="11">${o.d}</text>`).join('');
+ const svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(metric)} historical price trend">${grid}<polyline points="${points}" fill="none" stroke="#77a9ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${shown.map((d,i)=>`<circle cx="${x(i)}" cy="${y(d.level)}" r="2.2" fill="#b9d2ff"><title>${d.day}: ${fmt(d.level)}</title></circle>`).join('')}${labels}</svg>`;
+ $('historyChart').innerHTML=svg;
+ $('historyNote').textContent=I18N[lang].historyNote+` ${lang==='ar'?'عدد الأيام المنشورة':'Published days'}: ${shown.length}.`;
+}
+language();load();loadHistory();
 </script>
 </body>
 </html>
